@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/styles/styles.css" />
+
+    <script src="app.js" defer></script>
+
+    <title>Frontend Mentor | Calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div id="container" class="blue">
+      <header class="head">
+        <p class="logo blue">calc</p>
+        <p class="theme blue">Theme</p>
+        <div class="split">
+          <div class="numbers blue">1 2 3</div>
+          <div class="theme-toggler blue">
+            <div class="toggler-icons blue active" type="click"></div>
+          </div>
+        </div>
+      </header>
+      <form>
+        <div class="display-screen">
+          <input type="text" name="display" class="display" />
+        </div>
+        <div class="keyboard">
+          <div class="holder">
+            <div>
+              <input
+                class="single"
+                type="button"
+                value="7"
+                onclick="display.value += '7' "
+              />
+              <input
+                class="single"
+                type="button"
+                value="8"
+                onclick="display.value += '8' "
+              />
+              <input
+                class="single"
+                type="button"
+                value="9"
+                onclick="display.value += '9' "
+              />
+              <input
+                class="del"
+                type="button"
+                value="DEL"
+                onclick="display.value = display.value.toString().slice(0,-1)"
+              />
+            </div>
+            <div>
+              <input
+                class="single"
+                type="button"
+                value="4"
+                onclick="display.value += '4' "
+              />
+              <input
+                class="single"
+                type="button"
+                value="5"
+                onclick="display.value += '5' "
+              />
+              <input
+                class="single"
+                type="button"
+                value="6"
+                onclick="display.value += '6' "
+              />
+              <input
+                class="single"
+                type="button"
+                value="+"
+                onclick="display.value += '+' "
+              />
+            </div>
+            <div>
+              <input
+                class="single"
+                type="button"
+                value="1"
+                onclick="display.value += '1' "
+              />
+              <input
+                class="single"
+                type="button"
+                value="2"
+                onclick="display.value += '2' "
+              />
+              <input
+                class="single"
+                type="button"
+                value="3"
+                onclick="display.value += '3' "
+              />
+              <input
+                class="single"
+                type="button"
+                value="-"
+                onclick="display.value += '-' "
+              />
+            </div>
+            <div>
+              <input
+                class="single"
+                type="button"
+                value="."
+                onclick="display.value += '.' "
+              />
+              <input
+                class="single"
+                type="button"
+                value="0"
+                onclick="display.value += '0' "
+              />
+              <input
+                class="single"
+                type="button"
+                value="/"
+                onclick="display.value += '/' "
+              />
+              <input
+                class="single"
+                type="button"
+                value="*"
+                onclick="display.value += '*' "
+              />
+            </div>
+            <div>
+              <input
+                type="button"
+                value="reset"
+                colspan="2"
+                class="double"
+                onclick="display.value = '' "
+              />
+              <input
+                type="button"
+                value="="
+                colspan="2"
+                class="doubled"
+                onclick="display.value = eval(display.value) "
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+<!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
